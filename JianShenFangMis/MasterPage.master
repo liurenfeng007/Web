@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Src="UserLogin.ascx" TagName="UserLogin" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>健身房系统</title>
+    
+<!-- core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+  
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.pack.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+  <header id="header">   <!header 元素应该作为介绍内容或者导航链接栏的容器。>
+	<nav class="navbar navbar-inverse" role="banner">  <!nav标签定义导航链接的部分。>
+		<div class="container">
+			<div class="navbar-header"> <!定义了一个头部>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">健身房系统</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="Default.aspx"><img src="images/logo.gif" alt="logo"></a>
+			</div>
+			<div class="collapse navbar-collapse navbar-right">
+				<ul class="nav navbar-nav">
+					<li><a href="Default.aspx">首页</a></li>
+				 
+				 	<li><a href="UserStReg.aspx">会员注册</a></li>
+					  
+                 
+					<li><a href="NewsList.aspx?TypeName=健身资讯">健身资讯</a></li>
+					 		<li><a href="ChangDiList.aspx">场地</a></li>
+					 				<li><a href="QiCaiList.aspx">器械</a></li>
+					<li><a href="JiaoLianList.aspx">教练</a></li>
+					<li><a href="ZaiXianYuYue.aspx">课程预约</a></li>    
+							<li><a href="KeChengList.aspx">课程列表</a></li>   
+							                  
+				</ul>
+			</div>
+		</div><!--/.container-->
+	</nav><!--/nav-->
+</header>
+
+  
+	<!--banner-->
+<div class="banner2">
+	<p style="background:url(images/banner01.jpg) no-repeat center; background-size:cover;"></p>
+</div>
+<div class="container">
+	<div class="c_left">
+        <div class="left_menu">用户登录</div>
+		<ul>
+		
+            <uc1:UserLogin ID="UserLogin1" runat="server" />
+		 
+			 
+		</ul>
+		 
+    </div>
+    <div class="c_right">
+    <div class="c_title"><font><asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder></font>  
+        
+    </div>
+		 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+	</div>
+    <div class="clearfix"></div>
+</div>
+       
+
+
+<section id="bottom">
+	<div class="container">
+		 
+        
+	</div>
+</section><!--/#bottom-->
+
+<footer id="footer">
+	<div class="container">
+        <span class="fl">版权所有：健身房系统     ICP备案号：粤ICP备XXXXXXXX号</span>
+        <span class="fr"><a href="Admin/Login.aspx" target="_blank">管理员登录</a></span>
+	</div>
+</footer><!--/#footer-->
+    </form>
+</body>
+</html>
